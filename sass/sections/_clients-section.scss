@@ -1,0 +1,53 @@
+/** 
+  * General 
+  * ============================
+  */
+.clients {
+  overflow: hidden;
+
+  background-color: #f9f9f9;
+
+  $this: &;
+
+  &-list {
+    padding: 0 1.5rem;
+
+    #{$this}-item {
+      margin: {
+        left: -1.5rem;
+        right: -1.5rem;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    height: 21.4rem;
+
+    transition: all 0.5s;
+
+    border: 0.1rem solid #0000000d;
+
+    #{$this}__img {
+      max-width: 15rem;
+      max-height: 11rem;
+
+      opacity: 0.8;
+    }
+
+    &:hover {
+      z-index: 1;
+
+      transform: scale(1.1);
+
+      border: 0.1rem solid $primary-color;
+      border-radius: 0.6rem;
+      background-color: $primary-color;
+
+      #{$this}__img {
+        opacity: 1;
+      }
+    }
+  }
+}
